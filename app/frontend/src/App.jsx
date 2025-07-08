@@ -6,8 +6,10 @@ import './App.css';
 function App() {
   const [products, setProducts] = useState([]);
 
+  const baseUrl = import.meta.env.VITE_API_BASE_URL;
+
   useEffect(() => {
-    axios.get('http://localhost:3001/api/products')
+    axios.get(`${baseUrl}/api/products`)
       .then(res => setProducts(res.data))
       .catch(err => console.error('API Error:', err));
   }, []);
@@ -24,4 +26,4 @@ function App() {
   );
 }
 
-export default App; 
+export default App;

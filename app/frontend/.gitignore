@@ -1,7 +1,5 @@
-# root .gitignore içine ekle
-backend/node_modules/
-frontend/node_modules/
-backend/.env
+app/backend/node_modules/
+app/backend/.env
 
 # Logs
 logs
