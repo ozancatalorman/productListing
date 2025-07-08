@@ -1,0 +1,27 @@
+import { useEffect, useState } from 'react';
+import axios from 'axios';
+import ProductCard from './components/ProductCard';
+import './App.css';
+
+function App() {
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    axios.get('http://localhost:3001/api/products')
+      .then(res => setProducts(res.data))
+      .catch(err => console.error('API Error:', err));
+  }, []);
+
+  return (
+    <div className="container">
+      <h1 className="title">Product List</h1>
+      <div className="carousel">
+        {products.map((product, index) => (
+          <ProductCard key={index} product={product} />
+        ))}
+      </div>
+    </div>
+  );
+}
+
+export default App; 

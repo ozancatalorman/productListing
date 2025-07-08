@@ -1,0 +1,11 @@
+.filter-bar {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+  
+  .filter-bar input,
+  .filter-bar button {
+    padding: 8px;
+    font-size: 14px;
+  }

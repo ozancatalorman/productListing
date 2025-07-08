@@ -1,0 +1,86 @@
+.product-card {
+    flex: 0 0 auto;
+    width: 250px;
+    margin: 0px 10px;
+    text-align: left;
+    scroll-snap-align: start;
+  }
+  
+  .product-image {
+    width: 100%;
+    border-radius: 12px;
+  }
+  
+  .product-title {
+    font-size: 18px;
+    margin: 10px 0 5px;
+  }
+  
+  .product-price {
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .color-picker {
+    margin: 10px 0;
+  }
+  
+  .color-dot {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin: 0 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid transparent;
+  }
+  
+  .color-dot.active {
+    border-color: #000;
+  }
+  
+  .product-rating {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 500;
+    color: #333;
+    font-size: 15px;
+  }
+  
+  .stars {
+    display: flex;
+    align-items: center;
+  }
+  
+  .star {
+    font-size: 20px;
+    margin-right: 2px;
+    position: relative;
+    display: inline-block;
+    color: #e4e5e9; /* varsayılan boş yıldız rengi */
+  }
+  
+  .star.full {
+    color: #ffc107; /* dolu yıldız */
+  }
+  
+  .star.half::before {
+    content: '★';
+    color: #ffc107;
+    position: absolute;
+    width: 50%;
+    overflow: hidden;
+    z-index: 1;
+    left: 0;
+    top: 0;
+  }
+  
+  .star.half::after {
+    content: '★';
+    color: #e4e5e9;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+  }
